@@ -1,0 +1,18 @@
+class Solution {
+public:  
+    bool isValidSequence(TreeNode* root, vector<int>& arr) {
+        if(!root) return arr.size()==0;
+        return isvalid(root,arr,0);
+    }
+    
+     bool isvalid(TreeNode* root,vector<int>& arr, int index)
+    {
+          
+       if(root->val != arr[index]) return false; 
+        if(index==arr.size()-1) 
+            return !root->left && !root->right;
+  
+         return ((root->left && isvalid(root->left, arr,index+1)) || 
+               (root->right&& isvalid(root->right, arr,index+1))); 
+    }
+    
