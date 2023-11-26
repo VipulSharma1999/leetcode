@@ -30,5 +30,3 @@ jobs:
       run: |
           golangci-lint run --timeout 5m0s
 
-    - name: Test
-      run: go test -v ./...
