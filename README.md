@@ -1,2 +1,3 @@
-# leetcode
-30 days leetcode 
+# Leetcode Solns
+
+Leetcode solutions in Golang and C++ languages.
