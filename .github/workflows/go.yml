@@ -21,5 +21,14 @@ jobs:
       with:
         go-version: '1.21'
 
+    - name: GolangCI-Lint
+      run: |
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.54.2
+          golangci-lint --version
+
+    - name: Linter check
+      run: |
+          golangci-lint run --timeout 5m0s
+
     - name: Test
       run: go test -v ./...
