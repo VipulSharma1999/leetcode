@@ -1,17 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"sync"
 )
-
-func main() {
-	target := 6
-	a := []int{1, 3, 4, 2}
-	x := twoSum(a, target)
-	fmt.Println(x)
-
-}
 
 func twoSum(a []int, t int) []int {
 	//x := map[int]int{}
