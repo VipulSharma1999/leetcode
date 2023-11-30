@@ -11,7 +11,8 @@ on:
 
 jobs:
 
-  build:
+  Setup:
+    name: Setup Workflow 🚀 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
