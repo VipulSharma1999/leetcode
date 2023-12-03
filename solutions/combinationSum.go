@@ -15,11 +15,13 @@ func backtracking(ans *[][]int, temp, candidates []int, i, target int) {
 	if target < 0 || i > len(candidates) {
 		return
 	}
+
 	if target == 0 {
 		ctemp := make([]int, len(temp))
 		copy(ctemp, temp)
 		*ans = append(*ans, ctemp)
 	}
+
 	for j := i; j < len(candidates); j++ {
 		temp = append(temp, candidates[j])
 		backtracking(ans, temp, candidates, j, target-candidates[j])
